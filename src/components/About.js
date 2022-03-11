@@ -3,31 +3,30 @@ import React from 'react';
 const About = () => {
 	return (
 		<div>
-			<h2>How We Are Different: </h2>
+			<h2>How We Stand Out: </h2>
+			<dl>
+				<dt>Our Churros</dt>
+				<dd>Made from Scratch</dd>
+				<dd>Cooked to Order</dd>
+				<dd>Never Frozen</dd>
+				<p />
+				<dt>Our Carts</dt>
+				<dd>Custom Made</dd>
+				<dd>Vintage Style</dd>
+				<dd>Authentic from Guadalajara, Mexico</dd>
+				<p />
+			</dl>
 			<ul>
 				<li>
-					Yes I order it I flew to Guadalajara and had it custom made and was
-					shipped to Tijuana and I went to pick it up
+					Freshly cooked churros are transfered to drip pan, then smothered with
+					sugar and cinnamon for the original, authentic style
 				</li>
 				<li>
-					The difference it’s a vintage style versus just a regular cart with
-					little wheels more appealing I make the churros from scratch and cook
-					in front of you NOT BOUGHT say store frozen like other vendors
+					Gourmet style is topped with whip cream and choice of Chocolate,
+					Strawberry, or Caramel syrup
 				</li>
 				<li>
-					I stop freezing them it takes longer so we just make them fresh it’s
-					worth the wait for customers
-				</li>
-				<li>
-					I cook them then transfer to a drip pan so they won’t have lots oil
-					and then we smothered them with sugar and cinnamon original style and
-					if the want it gourmet we place them in a paper boat and topped with
-					whip cream and choice of syrup that are made from scratch
-				</li>
-				<li>No warmers </li>
-				<li>
-					Chocolate strawberry or caramel. We make the syrup ones a week shelve
-					life can be 10 days so we make enough for time
+					Custom made vintage styled carts flown in from Guadalajara, Mexico
 				</li>
 			</ul>
 			<h2>Why We Started:</h2>

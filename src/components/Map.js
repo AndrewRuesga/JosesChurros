@@ -10,7 +10,9 @@ import Geocode from 'react-geocode';
 import mapStyles from '../css/mapStyles';
 import '../css/map.css';
 
-Geocode.setApiKey('AIzaSyCzAGpZUGDU56HqJOu9NmLAEsQoRpnbEfg');
+const MAP_API_KEY = process.env.REACT_APP_MAP_API_KEY;
+
+Geocode.setApiKey(MAP_API_KEY);
 
 const libraries = ['places'];
 
@@ -87,7 +89,7 @@ const Map = () => {
 	}, []);
 
 	const { isLoaded, loadError } = useLoadScript({
-		googleMapsApiKey: 'AIzaSyCzAGpZUGDU56HqJOu9NmLAEsQoRpnbEfg',
+		googleMapsApiKey: MAP_API_KEY,
 		libraries,
 	});
 	if (loadError) return 'Error loading maps';
