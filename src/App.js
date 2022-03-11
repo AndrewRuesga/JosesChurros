@@ -1,14 +1,25 @@
 import Navbar from './components/Navbar';
 import Routes from './Routes';
+import Home from './components/Home';
+import Map from './components/Map';
+import Hire from './components/Hire';
+import Contact from './components/Contact';
+import About from './components/About';
+import Join from './components/Join';
 
 import './css/App.css';
-import './css/index.css';
 
 function App() {
 	return (
 		<div className="App">
 			<Navbar />
-			<Routes />
+			<Home />
+			<Map />
+			<Hire />
+			<Contact />
+			{/* <Join /> */}
+			<About />
+			{/* <Routes /> */}
 		</div>
 	);
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Join = () => {
 	return (
-		<div>
+		<div id="join">
 			<h2>Join Us</h2>
 			<p>
 				Interested in becoming apart of the team? Sign up below and one of our

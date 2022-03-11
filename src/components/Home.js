@@ -1,11 +1,10 @@
 import React from 'react';
-import Map from './Map';
+import banner from '../images/banner.png';
 
 export const Home = () => {
 	return (
-		<div>
-			<h3>Welcome, Jose</h3>
-			<Map />
+		<div id="home">
+			<img className="banner" alt="logo" src={banner} />
 		</div>
 	);
 };

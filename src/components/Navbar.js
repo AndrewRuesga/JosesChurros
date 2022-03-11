@@ -1,22 +1,83 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
+import logo from '../images/joseschurros.png';
 
 const Navbar = () => (
-	<div>
-		<h1>Joses Churros</h1>
+	<header>
+		<Link
+			activeClass="active"
+			to="home"
+			spy={true}
+			smooth={true}
+			offset={-70}
+			duration={500}
+		>
+			<img className="logo" alt="logo" src={logo} />
+		</Link>
 		<nav>
-			<div>
-				<Link to="/">Home</Link>
-				<Link to="/map">Find Us</Link>
-				<Link to="/hire">Hire Us</Link>
-				<Link to="/contact">Contact Us</Link>
-				<Link to="/join">Join Us</Link>
-				<Link to="/about">About Us</Link>
-				<Link to="/login">Login</Link>
-			</div>
+			<Link
+				activeClass="active"
+				to="map"
+				spy={true}
+				smooth={true}
+				offset={-70}
+				duration={500}
+			>
+				Find
+			</Link>
+			<Link
+				activeClass="active"
+				to="hire"
+				spy={true}
+				smooth={true}
+				offset={-70}
+				duration={500}
+			>
+				Hire
+			</Link>
+			<Link
+				activeClass="active"
+				to="contact"
+				spy={true}
+				smooth={true}
+				offset={-70}
+				duration={500}
+			>
+				Contact
+			</Link>
+			{/* <Link
+				activeClass="active"
+				to="join"
+				spy={true}
+				smooth={true}
+				offset={-70}
+				duration={500}
+			>
+				Join
+			</Link> */}
+			<Link
+				activeClass="active"
+				to="about"
+				spy={true}
+				smooth={true}
+				offset={-70}
+				duration={500}
+			>
+				About
+			</Link>
+			<Link
+				activeClass="active"
+				to="login"
+				spy={true}
+				smooth={true}
+				offset={-70}
+				duration={500}
+			>
+				Login
+			</Link>
 		</nav>
-		<hr />
-	</div>
+	</header>
 );
 
 export default Navbar;

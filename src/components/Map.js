@@ -96,7 +96,7 @@ const Map = () => {
 	if (!isLoaded) return 'Loading Maps';
 
 	return (
-		<div>
+		<div id="map">
 			<button
 				className="openButton"
 				onClick={() => {
@@ -114,10 +114,10 @@ const Map = () => {
 			>
 				Cart Closed
 			</button>
+			<h2 className="activeCarts">In the Area? Find our active carts now</h2>
+			<p className="activeCarts">Active Carts: {markers.length}</p>
 
-			<h3 className="activeCarts">Active Carts: {markers.length}</h3>
-
-			<div>
+			<div className="googleMap">
 				<Locate panTo={panTo} />
 				<GoogleMap
 					mapContainerStyle={mapContainerStyle}

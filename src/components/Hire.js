@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hire = () => {
 	return (
-		<div>
+		<div id="hire">
 			<h2>Catering Form</h2>
 			<p>Please describe your catering needs.</p>
 			<form>

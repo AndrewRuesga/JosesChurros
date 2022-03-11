@@ -14,7 +14,8 @@
     "react-geocode": "^0.2.3",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^5.0.0"
+    "react-scripts": "^5.0.0",
+    "react-scroll": "^1.8.6"
   },
   "scripts": {
     "start": "react-scripts start",
