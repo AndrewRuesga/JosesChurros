@@ -1,0 +1,38 @@
+#catering {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-bottom: 7rem;
+}
+
+/***BACKGROUND IMAGE***/
+.cateringBackground {
+	position: absolute;
+	z-index: -1;
+	margin-left: 10vw;
+	width: 80vw;
+	height: 75vh;
+}
+
+/****CATERING IMAGES****/
+#catering img {
+	height: 38vh;
+	border-style: solid;
+	border-width: 0.5rem;
+	border-radius: 8px;
+	border-color: rgb(207, 83, 26);
+}
+
+.chocolate {
+	position: absolute;
+	z-index: -1;
+	height: 38vh;
+	border-style: solid;
+	border-width: 0.5rem;
+	border-radius: 8px;
+	border-color: rgb(207, 144, 26);
+	opacity: 0.7;
+	margin-top: 1%;
+	margin-left: 42%;
+}

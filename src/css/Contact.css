@@ -1,0 +1,36 @@
+#contact {
+	display: flex;
+	background-image: url('../images/contactBackground.png');
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.logo {
+	padding-top: 1vw;
+	padding-left: 3vw;
+	padding-bottom: 1vw;
+	height: 9rem;
+}
+
+.logoContact {
+	display: flex;
+}
+
+.contact {
+	padding-top: 3vw;
+	padding-left: 2vw;
+}
+
+.contact p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.contact img {
+	height: 35px;
+}
+
+#navbar {
+	padding-right: 2vw;
+}

@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Ranchers&family=Righteous&display=swap');
+
+body {
+	opacity: 0.85;
+}
+
+h1 {
+	font-family: 'Monoton';
+	font-size: 2.5rem;
+	color: hsl(29, 98.9%, 36.3%);
+}
+h1.blue,
+span.blue {
+	color: hsl(192, 97.1%, 26.7%);
+}
+h1.black,
+span.black {
+	color: hsla(180, 1.4%, 13.9%, 0.75);
+}
+
+h2 {
+	font-family: 'Ranchers';
+	color: orange;
+	font-size: 2.2rem;
+	text-shadow: -1px 3px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000,
+		-1px -1px 0 #000;
+}
+
+p {
+	font-family: 'Righteous';
+	color: hsl(180, 1.4%, 13.9%);
+}
+
+button {
+	font-family: 'Ranchers';
+	text-shadow: -1px 3px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000,
+		-1px -1px 0 #000;
+	font-size: 1.3rem;
+	color: hsl(0, 0%, 100%);
+	mix-blend-mode: multiply;
+	transition: color 1s;
+
+	border: none;
+	background-color: hsla(0, 0%, 100%, 0);
+}
+
+button:hover {
+	color: orange;
+}
+
+a {
+	font-family: 'Ranchers';
+	text-shadow: -1px 3px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000,
+		-1px -1px 0 #000;
+	font-size: 1.3rem;
+	color: hsl(0, 0%, 100%);
+	mix-blend-mode: multiply;
+	transition: color 1s;
+
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover {
+	color: orange;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Righteous';
+	color: rgb(35, 36, 36);
+	flex-grow: 0.2;
+}
+
+input {
+	border-radius: 8px;
+	border-color: black;
+	border-width: 2px;
+}
+
+textarea {
+	border-radius: 8px;
+	border-color: black;
+	border-width: 2px;
+}

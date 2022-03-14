@@ -8,7 +8,8 @@ import {
 import { formatRelative } from 'date-fns';
 import Geocode from 'react-geocode';
 import mapStyles from '../css/mapStyles';
-import '../css/map.css';
+import logo from '../images/joseschurros.png';
+import compass from '../images/compass.png';
 
 const MAP_API_KEY = process.env.REACT_APP_MAP_API_KEY;
 
@@ -47,10 +48,10 @@ const Map = () => {
 	};
 
 	const closeCart = () => {
-		const myPosition = (marker) =>
-			marker.lat.toFixed(3) === position.coords.latitude.toFixed(3);
+		// const myPosition = (marker) =>
+		// 	marker.lat.toFixed(3) === position.coords.latitude.toFixed(3);
 
-		let found = markers.findIndex(myPosition);
+		// let found = markers.findIndex(myPosition);
 
 		// let remove = markers.splice(found, 1);
 		// markers = remove;
@@ -97,26 +98,6 @@ const Map = () => {
 
 	return (
 		<div id="map">
-			<button
-				className="openButton"
-				onClick={() => {
-					openCart();
-				}}
-			>
-				Cart Open
-			</button>
-
-			<button
-				className="closedButton"
-				onClick={() => {
-					closeCart();
-				}}
-			>
-				Cart Closed
-			</button>
-			<h2 className="activeCarts">In the Area? Find our active carts now</h2>
-			<p className="activeCarts">Active Carts: {markers.length}</p>
-
 			<div className="googleMap">
 				<Locate panTo={panTo} />
 				<GoogleMap
@@ -125,15 +106,14 @@ const Map = () => {
 					center={center}
 					options={options}
 					onLoad={onMapLoad}
-					className="map"
 				>
 					{markers.map((marker) => (
 						<Marker
 							key={marker.time.toISOString()}
 							position={{ lat: marker.lat, lng: marker.lng }}
 							icon={{
-								url: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F13%2F2016%2F07%2F14%2Fi-z492vM6-L.jpg',
-								scaledSize: new window.google.maps.Size(30, 30),
+								url: logo,
+								scaledSize: new window.google.maps.Size(35, 35),
 								origin: new window.google.maps.Point(0, 0),
 								anchor: new window.google.maps.Point(15, 15),
 							}}
@@ -148,7 +128,7 @@ const Map = () => {
 										let lngAddress =
 											singleAddress.geometry.location.lng.toFixed(3);
 										let streetAddress = singleAddress.formatted_address;
-										if (latAddress == latMarker && lngAddress == lngMarker)
+										if (latAddress === latMarker && lngAddress === lngMarker)
 											return streetAddress;
 									});
 									curMarker.streetAddress = singleAddress;
@@ -158,7 +138,6 @@ const Map = () => {
 							}}
 						/>
 					))}
-
 					{selected ? (
 						<InfoWindow
 							position={{ lat: selected.lat, lng: selected.lng }}
@@ -167,7 +146,7 @@ const Map = () => {
 							}}
 						>
 							<div>
-								<h3>Cart Active</h3>
+								<h2>Cart Active</h2>
 								<p>Open {formatRelative(selected.time, new Date())}</p>
 								<p>Located at:</p>
 								<p> {selected.streetAddress}</p>
@@ -176,6 +155,35 @@ const Map = () => {
 					) : null}
 				</GoogleMap>
 			</div>
+
+			<div className="cartCheckin">
+				<button
+					onClick={() => {
+						openCart();
+					}}
+				>
+					Cart Open
+				</button>
+				<button
+					onClick={() => {
+						closeCart();
+					}}
+				>
+					Cart Closed
+				</button>
+			</div>
+
+			<div className="ourCarts">
+				<h2>Our Carts</h2>
+				<p>Vintage inspired and custom ordered from Guadalajara,</p>{' '}
+				<p>Mexico. Luckily, you don't have to travel all the way to</p>{' '}
+				<p>Jose's hometown for a taste of our delicious churros.</p>
+				<p>
+					Our interactive map show's which carts are active right
+					<p>here in Sunny Southern California.</p>
+				</p>
+				<h2>Carts Active: {markers.length}</h2>
+			</div>
 		</div>
 	);
 };
@@ -183,7 +191,7 @@ const Map = () => {
 function Locate({ panTo }) {
 	return (
 		<button
-			className="locate"
+			className="compass"
 			onClick={() => {
 				navigator.geolocation.getCurrentPosition(
 					(position) => {
@@ -196,10 +204,7 @@ function Locate({ panTo }) {
 				);
 			}}
 		>
-			<img
-				src="http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/compass.png"
-				alt="compass - locate me"
-			/>
+			<img src={compass} alt="compass - locate me" />
 		</button>
 	);
 }

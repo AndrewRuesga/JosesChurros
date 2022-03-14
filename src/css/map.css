@@ -1,25 +1,55 @@
-.activeCarts {
+#map {
 	display: flex;
-	font-family: 'Roboto';
-	justify-content: center;
-	z-index: 1;
-	margin: 0;
-	padding: 0;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+	background-image: url('../images/mapBackground.png');
+	background-size: cover;
+	transform: translateY(-5em);
+	padding: 2em 2em 2em 2em;
 }
 
-.googleMap {
-	display: flex;
-	justify-content: center;
-}
-.locate img {
-	width: 30px;
-	cursor: pointer;
-}
-
-.locate {
-	display: flex;
-	position: relative;
+/***GOOGLE MAP***/
+.compass {
+	position: absolute;
 	background: none;
 	border: none;
 	z-index: 1;
+	cursor: pointer;
+}
+
+.compass img {
+	width: 3rem;
+}
+
+.googleMap {
+	border-style: solid;
+	border-width: 0.5em;
+	border-radius: 8px;
+	border-color: rgb(207, 144, 26);
+	outline: 8px solid rgb(207, 83, 26);
+}
+
+.gmnoprint,
+.gm-style-cc {
+	transform: rotateX(0.25turn);
+}
+
+/***CART CHECK IN/OUT***/
+.cartCheckin {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-left: 2vw;
+	margin-top: 3vh;
+}
+
+/***OUR CARTS***/
+.ourCarts {
+	padding-left: 3vw;
+}
+
+.ourCarts p {
+	margin-top: 0;
+	margin-bottom: 0;
 }

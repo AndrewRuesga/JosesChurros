@@ -1,25 +1,19 @@
-import Navbar from './components/Navbar';
 import Routes from './Routes';
-import Home from './components/Home';
-import Map from './components/Map';
-import Hire from './components/Hire';
-import Contact from './components/Contact';
-import About from './components/About';
-import Join from './components/Join';
 
-import './css/App.css';
+import './css/Home.css';
+import './css/Header.css';
+import './css/Map.css';
+import './css/About.css';
+import './css/Catering.css';
+import './css/Contact.css';
+import './css/Navbar.css';
+import './css/Footer.css';
+import './css/Login.css';
 
 function App() {
 	return (
-		<div className="App">
-			<Navbar />
-			<Home />
-			<Map />
-			<Hire />
-			<Contact />
-			{/* <Join /> */}
-			<About />
-			{/* <Routes /> */}
+		<div id="app">
+			<Routes />
 		</div>
 	);
 }

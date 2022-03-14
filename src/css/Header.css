@@ -1,0 +1,31 @@
+#header {
+	display: flex;
+	background-image: url('../images/headerBackground.png');
+	background-size: cover;
+	transform: translateY(-5rem);
+	padding: 1rem 1rem 1rem 1rem;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 7rem;
+	padding-left: 7rem;
+	flex-wrap: wrap;
+}
+
+.title {
+	padding-top: 10vh;
+}
+
+#header .titleHead {
+	margin-bottom: 5%;
+}
+
+#header h1 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#header img {
+	height: 22rem;
+	padding-top: 15vh;
+	padding-right: 25vw;
+}

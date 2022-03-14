@@ -1,0 +1,30 @@
+#login {
+	display: flex;
+}
+
+#login a {
+	font-family: 'Ranchers';
+	text-shadow: -2px 2px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000;
+	color: white;
+	transition: color 1s;
+	text-decoration: none;
+}
+
+#login a:hover {
+	color: orange;
+}
+
+#login button {
+	font-family: 'Ranchers';
+	text-shadow: -2px 2px 0 #000, 1px -1px 0 #000, -2px 2px 0 #000;
+	color: white;
+	transition: color 1s;
+}
+
+#login button:hover {
+	color: orange;
+}
+
+.titleLogin {
+	color: rgb(2, 108, 134);
+}

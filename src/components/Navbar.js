@@ -1,83 +1,42 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-import { Link } from 'react-scroll';
-import logo from '../images/joseschurros.png';
+import { Link } from 'react-router-dom';
+import { Link as Scroll } from 'react-scroll';
 
 const Navbar = () => (
-	<header>
-		<Link
+	<nav id="navbar">
+		<Scroll
 			activeClass="active"
-			to="home"
+			to="map"
 			spy={true}
 			smooth={true}
 			offset={-70}
 			duration={500}
 		>
-			<img className="logo" alt="logo" src={logo} />
-		</Link>
-		<nav>
-			<Link
-				activeClass="active"
-				to="map"
-				spy={true}
-				smooth={true}
-				offset={-70}
-				duration={500}
-			>
-				Find
-			</Link>
-			<Link
-				activeClass="active"
-				to="hire"
-				spy={true}
-				smooth={true}
-				offset={-70}
-				duration={500}
-			>
-				Hire
-			</Link>
-			<Link
-				activeClass="active"
-				to="contact"
-				spy={true}
-				smooth={true}
-				offset={-70}
-				duration={500}
-			>
-				Contact
-			</Link>
-			{/* <Link
-				activeClass="active"
-				to="join"
-				spy={true}
-				smooth={true}
-				offset={-70}
-				duration={500}
-			>
-				Join
-			</Link> */}
-			<Link
-				activeClass="active"
-				to="about"
-				spy={true}
-				smooth={true}
-				offset={-70}
-				duration={500}
-			>
-				About
-			</Link>
-			<Link
-				activeClass="active"
-				to="login"
-				spy={true}
-				smooth={true}
-				offset={-70}
-				duration={500}
-			>
-				Login
-			</Link>
-		</nav>
-	</header>
+			Our Carts
+		</Scroll>
+		<Scroll
+			activeClass="active"
+			to="about"
+			spy={true}
+			smooth={true}
+			offset={-70}
+			duration={500}
+		>
+			Our Churros
+		</Scroll>
+		<Scroll
+			activeClass="active"
+			to="catering"
+			spy={true}
+			smooth={true}
+			offset={-70}
+			duration={500}
+		>
+			Our Catering
+		</Scroll>
+		<Link to="/login">Our Login</Link>
+		{/* <Link to="/">Our Logout</Link> */}
+	</nav>
 );
 
 export default Navbar;
