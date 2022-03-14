@@ -6,9 +6,9 @@ import './css/Map.css';
 import './css/About.css';
 import './css/Catering.css';
 import './css/Contact.css';
-import './css/Navbar.css';
 import './css/Footer.css';
 import './css/Login.css';
+import './css/MediaQuery.css';
 
 function App() {
 	return (

@@ -1,0 +1,60 @@
+@media all and (max-width: 400px) {
+	h1 {
+		font-size: 1.7rem;
+	}
+
+	#header {
+		padding-left: 2rem;
+	}
+
+	#header img {
+		height: 15rem;
+		padding-top: 5vh;
+		padding-left: -5vh;
+		padding-right: 0vh;
+	}
+
+	#catering .chocolate {
+		display: none;
+	}
+
+	#catering .cart {
+		display: none;
+	}
+
+	#catering {
+		justify-content: center;
+		align-items: center;
+	}
+
+	#contact {
+		flex-direction: column;
+	}
+
+	.logo {
+		padding-top: 1vw;
+		padding-right: 12vw;
+		padding-bottom: 1vw;
+	}
+	#navbar {
+		padding-bottom: 4vw;
+		flex-direction: row;
+		justify-content: space-around;
+		padding-right: 0vw;
+	}
+}
+
+@media all and (max-width: 900px) {
+	#catering .chocolate {
+		display: none;
+	}
+
+	#catering .cart {
+		display: none;
+	}
+
+	#catering {
+		justify-content: center;
+		align-items: center;
+	}
+}

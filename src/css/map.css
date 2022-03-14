@@ -28,6 +28,7 @@
 	border-radius: 8px;
 	border-color: rgb(207, 144, 26);
 	outline: 8px solid rgb(207, 83, 26);
+	/* overflow: hidden; */
 }
 
 .gmnoprint,

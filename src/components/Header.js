@@ -13,7 +13,7 @@ export const Header = () => {
 					GOURMET <span className="black">CHURROS</span>
 				</h1>
 			</div>
-			<img alt="" src={logo} />
+			<img className="logoHeader" alt="" src={logo} />
 		</div>
 	);
 };

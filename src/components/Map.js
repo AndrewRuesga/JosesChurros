@@ -18,7 +18,7 @@ Geocode.setApiKey(MAP_API_KEY);
 const libraries = ['places'];
 
 const mapContainerStyle = {
-	width: '90vh',
+	width: '50vw',
 	height: '50vh',
 };
 
