@@ -5,12 +5,17 @@ import chocolateChurro from '../images/chocolateChurro.png';
 const Catering = () => {
 	return (
 		<div id="catering">
-			<form>
+			<form
+				action="https://formsubmit.co/andrewruesga@icloud.com"
+				method="POST"
+			>
 				<h2>Our Catering</h2>
+				<input type="hidden" name="_captcha" value="false" />
+				<input type="hidden" name="_next" value="https://joses-churros.com/" />
 				<label> Name </label>
 				<input name="name" type="text" />
 				<label> Email </label>
-				<input name="email" type="text" />
+				<input name="email" type="text" required />
 				<label> Phone </label>
 				<input name="phone" type="text" />
 				<label> Date </label>
@@ -21,7 +26,7 @@ const Catering = () => {
 				<input name="guests" type="text" />
 				<label> Comments </label>
 				<textarea className="comments" rows="3" name="message" type="text" />
-				<button>Request a Quote</button>
+				<button type="submit">Request a Quote</button>
 			</form>
 			<div>
 				<img className="chocolate" alt="" src={chocolateChurro} />

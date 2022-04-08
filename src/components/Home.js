@@ -4,9 +4,7 @@ import React from 'react';
 import Header from './Header';
 import Map from './Map';
 import Catering from './Catering';
-import Contact from './Contact';
 import About from './About';
-import Footer from './Footer';
 
 export const Home = () => {
 	return (
@@ -15,8 +13,6 @@ export const Home = () => {
 			<Map />
 			<About />
 			<Catering />
-			<Contact />
-			<Footer />
 		</div>
 	);
 };

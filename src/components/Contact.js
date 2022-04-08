@@ -15,9 +15,21 @@ const Contact = () => {
 				<div className="contact">
 					<p>(760) 583-8869</p>
 					<p>joses8869@yahoo.com</p>
-					<p>@joseschurros</p>
-					<img alt="" src={facebook} />
-					<img alt="" src={instagram} />
+					<p>@joses_churros</p>
+					<a
+						rel="noreferrer"
+						href="https://www.facebook.com/people/Joses-Churros/100074888466651/"
+						target="_blank"
+					>
+						<img alt="" src={facebook} />
+					</a>
+					<a
+						rel="noreferrer"
+						href="https://www.instagram.com/joses_churros/"
+						target="_blank"
+					>
+						<img alt="" src={instagram} />
+					</a>
 				</div>
 			</div>
 

@@ -1,26 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { auth, logInWithEmailAndPassword } from '../firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth, registerWithEmailAndPassword } from '../firebase';
 
-const Login = () => {
+function Register() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const [name, setName] = useState('');
 	const [user, loading, error] = useAuthState(auth);
 	const navigate = useNavigate();
+
+	const register = () => {
+		if (!name || !password || !email) alert('Please Fill Out All Fields');
+		else registerWithEmailAndPassword(name, email, password);
+	};
+
 	useEffect(() => {
-		if (loading) {
-			// maybe trigger a loading screen
-			return;
-		}
+		if (loading) return;
 		if (user) navigate('/');
 	}, [user, loading]);
 
 	return (
-		<div className="login">
+		<div className="register">
 			<Link to="/">Back</Link>
-			<h1>SIGN IN</h1>
+
+			<h1 className="titleLogin">SIGN UP</h1>
 			<div className="login">
+				<label htmlFor="name">Name:</label>
+				<input
+					name="name"
+					type="text"
+					value={name}
+					onChange={(e) => setName(e.target.value)}
+				/>
 				<label htmlFor="email">Email:</label>
 				<input
 					name="email"
@@ -35,16 +47,11 @@ const Login = () => {
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
 				/>
-				{/* <Link to="/reset">Forgot Password</Link> */}
-				<button
-					type="submit"
-					onClick={() => logInWithEmailAndPassword(email, password)}
-				>
-					Sign In
+				<button type="submit" onClick={register}>
+					Sign Up
 				</button>
 			</div>
 		</div>
 	);
-};
-
-export default Login;
+}
+export default Register;

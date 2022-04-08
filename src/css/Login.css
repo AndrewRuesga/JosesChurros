@@ -1,5 +1,17 @@
 #login {
 	display: flex;
+	flex-direction: column;
+	font-family: 'Righteous';
+	color: rgb(35, 36, 36);
+	flex-grow: 0.2;
+}
+
+.login {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Righteous';
+	color: rgb(35, 36, 36);
+	flex-grow: 0.2;
 }
 
 #login a {
