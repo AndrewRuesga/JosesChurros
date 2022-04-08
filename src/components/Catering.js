@@ -5,10 +5,7 @@ import chocolateChurro from '../images/chocolateChurro.png';
 const Catering = () => {
 	return (
 		<div id="catering">
-			<form
-				action="https://formsubmit.co/andrewruesga@icloud.com"
-				method="POST"
-			>
+			<form action="https://formsubmit.co/joses8869@yahoo.com" method="POST">
 				<h2>Our Catering</h2>
 				<input type="hidden" name="_captcha" value="false" />
 				<input type="hidden" name="_next" value="https://joses-churros.com/" />
