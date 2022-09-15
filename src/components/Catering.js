@@ -24,7 +24,12 @@ const Catering = () => {
 				<label> Comments </label>
 				<textarea className="comments" rows="3" name="message" type="text" />
 				<button type="submit">Request a Quote</button>
+				<p style={{ marginBottom: 0 }}>Two Hour Event & 50 People Minimum,</p>
+				<p style={{ marginTop: 0, marginBottom: 0 }}>
+					20% Deposit Required, Non-Refundable
+				</p>
 			</form>
+
 			<div>
 				<img className="chocolate" alt="" src={chocolateChurro} />
 				<img className="cart" alt="" src={cartPhoto} />

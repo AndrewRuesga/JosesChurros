@@ -1,8 +1,8 @@
 #map {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: flex-start;
+	/* display: flex; */
+	/* flex-wrap: wrap; */
+	/* align-items: center; */
+	/* justify-content: center; */
 	background-image: url('../images/mapBackground.png');
 	background-size: cover;
 	transform: translateY(-5em);

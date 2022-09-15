@@ -24,7 +24,7 @@ const Navbar = () => {
 				offset={-70}
 				duration={500}
 			>
-				Our Carts
+				Our Menu
 			</Scroll>
 			<Scroll
 				activeClass="active"
@@ -46,11 +46,11 @@ const Navbar = () => {
 			>
 				Our Catering
 			</Scroll>
-			{user ? (
+			{/* {user ? (
 				<button onClick={logoutFnc}>Our Logout</button>
 			) : (
 				<Link to="/login">Our Login</Link>
-			)}
+			)} */}
 		</nav>
 	);
 };

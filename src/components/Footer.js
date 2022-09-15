@@ -6,7 +6,7 @@ const Footer = () => {
 			<p>
 				Web Design & Development by{' '}
 				<a
-					href="https://www.linkedin.com/in/andrewruesga/"
+					href="https://www.andrewruesga.com"
 					target="_blank"
 					rel="noopener noreferrer"
 				>

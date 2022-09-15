@@ -1,6 +1,6 @@
 ## Deploy Website
 
-1. npm install -g firebase-tools
+1. sudo npm install -g firebase-tools
 
 2. npm run build
 
