@@ -17,6 +17,7 @@ import './css/Contact.css';
 import './css/Footer.css';
 import './css/Login.css';
 import './css/MediaQuery.css';
+import './css/Menu.css';
 
 function App() {
 	return (

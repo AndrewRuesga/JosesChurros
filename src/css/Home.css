@@ -84,3 +84,8 @@ textarea {
 	border-color: black;
 	border-width: 2px;
 }
+
+div {
+	font-family: 'Righteous';
+	color: hsl(180, 1.4%, 13.9%);
+}

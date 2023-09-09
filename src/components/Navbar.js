@@ -34,9 +34,9 @@ const Navbar = () => {
 				offset={-70}
 				duration={500}
 			>
-				Our Churros
+				About Us
 			</Scroll>
-			<Scroll
+			{/* <Scroll
 				activeClass="active"
 				to="catering"
 				spy={true}
@@ -44,8 +44,8 @@ const Navbar = () => {
 				offset={-70}
 				duration={500}
 			>
-				Our Catering
-			</Scroll>
+				Our Food
+			</Scroll> */}
 			{/* {user ? (
 				<button onClick={logoutFnc}>Our Logout</button>
 			) : (

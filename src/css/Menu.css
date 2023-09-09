@@ -1,0 +1,25 @@
+.grid-container {
+	display: grid;
+	grid-template-columns: 90% 10%; /* 4 columns with equal width */
+	/* gap: 10px; Adjust the gap between columns as needed */
+	width: 100%; /* Make sure the grid container spans the entire width */
+}
+
+.grid-item {
+	/* Set a height for the grid items as needed */
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-around; */
+	/* align-items: center; */
+	/* text-align: center; */
+	/* background-color: #f0f0f0; Optional: Add a background color */
+}
+
+.col1 {
+	justify-self: flex-start;
+	font-size: 1.5rem !important;
+}
+
+.col2 {
+	justify-self: flex-end;
+}

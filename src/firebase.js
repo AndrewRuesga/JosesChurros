@@ -22,45 +22,45 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
-const db = getFirestore();
+// const auth = getAuth();
+// const db = getFirestore();
 
-const logInWithEmailAndPassword = async (email, password) => {
-	setPersistence(auth, browserLocalPersistence).then(() => {
-		return signInWithEmailAndPassword(auth, email, password);
-	});
-};
+// const logInWithEmailAndPassword = async (email, password) => {
+// 	setPersistence(auth, browserLocalPersistence).then(() => {
+// 		return signInWithEmailAndPassword(auth, email, password);
+// 	});
+// };
 
-const registerWithEmailAndPassword = async (username, email, password) => {
-	const res = await createUserWithEmailAndPassword(auth, email, password);
-	const user = res.user;
-	await setDoc(doc(db, 'users', `${user.uid}`), {
-		uid: user.uid,
-		username: username,
-		email: email,
-	});
-};
+// const registerWithEmailAndPassword = async (username, email, password) => {
+// 	const res = await createUserWithEmailAndPassword(auth, email, password);
+// 	const user = res.user;
+// 	await setDoc(doc(db, 'users', `${user.uid}`), {
+// 		uid: user.uid,
+// 		username: username,
+// 		email: email,
+// 	});
+// };
 
-const sendPasswordReset = async (email) => {
-	try {
-		await sendPasswordResetEmail(auth, email);
-		alert('Password reset link sent!');
-	} catch (err) {
-		console.error(err);
-		alert(err.message);
-	}
-};
+// const sendPasswordReset = async (email) => {
+// 	try {
+// 		await sendPasswordResetEmail(auth, email);
+// 		alert('Password reset link sent!');
+// 	} catch (err) {
+// 		console.error(err);
+// 		alert(err.message);
+// 	}
+// };
 
-const logout = () => {
-	signOut(auth);
-};
+// const logout = () => {
+// 	signOut(auth);
+// };
 
 export {
-	auth,
-	db,
+	// auth,
+	// db,
 	app,
-	logInWithEmailAndPassword,
-	registerWithEmailAndPassword,
-	sendPasswordReset,
-	logout,
+	// logInWithEmailAndPassword,
+	// registerWithEmailAndPassword,
+	// sendPasswordReset,
+	// logout,
 };

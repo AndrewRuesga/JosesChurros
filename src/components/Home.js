@@ -6,13 +6,14 @@ import Map from './Map';
 import Catering from './Catering';
 import About from './About';
 import Menu from './Menu';
+import Menu2 from './Menu2';
 
 export const Home = () => {
 	return (
 		<div id="home">
 			<Header />
 			{/* <Map /> */}
-			<Menu />
+			<Menu2 />
 			<About />
 			<Catering />
 		</div>

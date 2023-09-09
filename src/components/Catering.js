@@ -1,11 +1,12 @@
 import React from 'react';
 import cartPhoto from '../images/cart.png';
 import chocolateChurro from '../images/chocolateChurro.png';
+import foodTruck from '../images/FoodTruck.jpeg';
 
 const Catering = () => {
 	return (
 		<div id="catering">
-			<form action="https://formsubmit.co/joses8869@yahoo.com" method="POST">
+			{/* <form action="https://formsubmit.co/joses8869@yahoo.com" method="POST">
 				<h2>Our Catering</h2>
 				<input type="hidden" name="_captcha" value="false" />
 				<input type="hidden" name="_next" value="https://joses-churros.com/" />
@@ -28,11 +29,12 @@ const Catering = () => {
 				<p style={{ marginTop: 0, marginBottom: 0 }}>
 					20% Deposit Required, Non-Refundable
 				</p>
-			</form>
+			</form> */}
 
 			<div>
 				<img className="chocolate" alt="" src={chocolateChurro} />
 				<img className="cart" alt="" src={cartPhoto} />
+				<img className="foodTruck" alt="" src={foodTruck} />
 			</div>
 		</div>
 	);

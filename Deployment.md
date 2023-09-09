@@ -4,4 +4,4 @@
 
 2. npm run build
 
-3. firebase deploy
+3. sudo firebase deploy
