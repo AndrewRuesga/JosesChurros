@@ -10,8 +10,8 @@ import Geocode from 'react-geocode';
 import mapStyles from '../css/mapStyles';
 import logo from '../images/joseschurros.png';
 import compass from '../images/compass.png';
-import { auth } from '../firebase';
-import { useAuthState } from 'react-firebase-hooks/auth';
+// import { auth } from '../firebase';
+// import { useAuthState } from 'react-firebase-hooks/auth';
 
 const MAP_API_KEY = process.env.REACT_APP_MAP_API_KEY;
 
@@ -36,7 +36,7 @@ const options = {
 };
 
 const Map = () => {
-	const [user, loading, error] = useAuthState(auth);
+	// const [user, loading, error] = useAuthState(auth);
 	const [markers, setMarkers] = React.useState([]);
 	const [selected, setSelected] = React.useState(null);
 	const [address, setAddress] = React.useState([]);
@@ -158,7 +158,7 @@ const Map = () => {
 					) : null}
 				</GoogleMap>
 			</div>
-			{user ? (
+			{/* {user ? (
 				<div className="cartCheckin">
 					<button
 						onClick={() => {
@@ -175,7 +175,7 @@ const Map = () => {
 						Cart Closed
 					</button>
 				</div>
-			) : null}
+			) : null} */}
 
 			<div className="ourCarts">
 				<h2>Our Carts</h2>

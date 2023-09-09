@@ -6,7 +6,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Dashboard from './components/Dashboard';
+// import Dashboard from './components/Dashboard';
 
 import './css/Home.css';
 import './css/Header.css';
@@ -25,9 +25,9 @@ function App() {
 			<Router>
 				<Routes>
 					<Route path="/" exact element={<Home />} />
-					<Route path="/login" element={<Login />} />
-					<Route path="/register" element={<Register />} />
-					<Route exact path="/dashboard" element={<Dashboard />} />
+					{/* <Route path="/login" element={<Login />} /> */}
+					{/* <Route path="/register" element={<Register />} /> */}
+					{/* <Route exact path="/dashboard" element={<Dashboard />} /> */}
 				</Routes>
 				<Contact />
 				<Footer />

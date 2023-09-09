@@ -2,18 +2,18 @@ import React from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { Link as Scroll } from 'react-scroll';
-import { auth } from '../firebase';
-import { logout } from '../firebase';
+// import { auth } from '../firebase';
+// import { logout } from '../firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 const Navbar = () => {
-	const [user, loading, error] = useAuthState(auth);
-	const navigate = useNavigate();
+	// const [user, loading, error] = useAuthState(auth);
+	// const navigate = useNavigate();
 
-	const logoutFnc = () => {
-		logout();
-		navigate('/');
-	};
+	// const logoutFnc = () => {
+	// 	logout();
+	// 	navigate('/');
+	// };
 	return (
 		<nav id="navbar">
 			<Scroll

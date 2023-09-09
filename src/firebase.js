@@ -1,14 +1,14 @@
 import { initializeApp } from 'firebase/app';
-import {
-	getAuth,
-	signInWithEmailAndPassword,
-	createUserWithEmailAndPassword,
-	sendPasswordResetEmail,
-	signOut,
-	setPersistence,
-	browserLocalPersistence,
-} from 'firebase/auth';
-import { getFirestore, setDoc, doc } from 'firebase/firestore';
+// import {
+// 	getAuth,
+// 	signInWithEmailAndPassword,
+// 	createUserWithEmailAndPassword,
+// 	sendPasswordResetEmail,
+// 	signOut,
+// 	setPersistence,
+// 	browserLocalPersistence,
+// } from 'firebase/auth';
+// import { getFirestore, setDoc, doc } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
