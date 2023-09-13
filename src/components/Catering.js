@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import cartPhoto from '../images/cart.png';
 import chocolateChurro from '../images/chocolateChurro.png';
 import foodTruck from '../images/FoodTruck.jpeg';
 
 const Catering = () => {
-	return (
+	const [showComponent, setShowComponent] = useState(window.innerWidth > 820);
+
+	useEffect(() => {
+		// Function to update the showComponent state based on screen width
+		const handleResize = () => {
+			setShowComponent(window.innerWidth > 820);
+		};
+
+		// Add a listener for window resize events
+		window.addEventListener('resize', handleResize);
+
+		// Clean up the event listener when the component unmounts
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+	return showComponent ? (
 		<div id="catering">
 			{/* <form action="https://formsubmit.co/joses8869@yahoo.com" method="POST">
 				<h2>Our Catering</h2>
@@ -37,6 +53,8 @@ const Catering = () => {
 				<img className="foodTruck" alt="" src={foodTruck} />
 			</div>
 		</div>
+	) : (
+		<></>
 	);
 };
 

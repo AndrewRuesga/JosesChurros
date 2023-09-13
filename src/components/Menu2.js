@@ -1,6 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Menu2() {
+	const [showComponent, setShowComponent] = useState(window.innerWidth > 764);
+
+	useEffect(() => {
+		// Function to update the showComponent state based on screen width
+		const handleResize = () => {
+			setShowComponent(window.innerWidth > 764);
+		};
+
+		// Add a listener for window resize events
+		window.addEventListener('resize', handleResize);
+
+		// Clean up the event listener when the component unmounts
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
 	const comesWith = [
 		`plates`,
 		`forks`,
@@ -198,7 +215,11 @@ export default function Menu2() {
 				</div>
 			</div>
 			<div
-				style={{ display: 'flex', justifyContent: 'space-around', gap: 150 }}
+				style={{
+					display: 'flex',
+					justifyContent: 'space-around',
+					gap: showComponent ? 150 : 40,
+				}}
 			>
 				<div className="grid-container">
 					{cateringMenu.map(({ title, cost, includes, options }) => (
@@ -217,13 +238,13 @@ export default function Menu2() {
 									>
 										{title}
 									</h2>
-									{options && (
+									{options && showComponent && (
 										<div style={{ fontSize: '0.9rem' }}>
 											{options.join(' / ')}
 										</div>
 									)}
 								</div>
-								<div>{includes.join(', ')}</div>
+								<div>{showComponent && includes.join(', ')}</div>
 							</div>
 
 							<div className="grid-item col2">${cost}</div>
@@ -248,13 +269,13 @@ export default function Menu2() {
 									>
 										{title}
 									</h2>
-									{options && (
+									{options && showComponent && (
 										<div style={{ fontSize: '0.9rem' }}>
 											{options.join(' / ')}
 										</div>
 									)}
 								</div>
-								<div>{includes.join(', ')}</div>
+								<div>{showComponent && includes.join(', ')}</div>
 							</div>
 
 							<div className="grid-item col2">${cost}</div>
